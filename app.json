@@ -1,7 +1,9 @@
 {
   "expo": {
-    "name": "newMLApp",
-    "slug": "newMLApp",
+    "scheme": "com.newmlapps.newmlapp",
+    "name": "newmlapp",
+    
+    "slug": "newmlapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,6 +12,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    
     "updates": {
       "fallbackToCacheTimeout": 0
     },
