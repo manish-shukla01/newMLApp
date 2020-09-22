@@ -2,7 +2,6 @@
   "expo": {
     "scheme": "com.newmlapps.newmlapp",
     "name": "newmlapp",
-    
     "slug": "newmlapp",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -12,7 +11,6 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -20,10 +18,14 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.manishshukla.newmlapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "android": {
+      "package": "com.manishshukla.newmlapp"
     }
   }
 }

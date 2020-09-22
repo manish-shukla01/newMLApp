@@ -2,47 +2,42 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
-import { makeRedirectUri, useAuthRequest, useAutoDiscovery } from 'expo-auth-session';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { Button } from 'react-native';
+import {HomeScreen} from './Screens/HomeScreen';
 
-export default function App() {
-  // Endpoint
-  const discovery = useAutoDiscovery('https://manishb2ctenant.b2clogin.com/cd31b2db-a0a7-48a1-89be-6bfe6fc0d5f2/oauth2/v2.0/');
-  //const discovery = useAutoDiscovery('https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration');
+import {LoginScreen} from './Screens/LoginScreen';
 
-  //https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_sign_in/v2.0/.well-known/openid-configuration
+import {ImageAnalysisScreen} from './Screens/ImageAnalysisScreen';
+import {ProfileScreen} from './Screens/ProfileScreen';
+import {AudioScreen} from './Screens/AudioScreen';
 
-  
+const Stack = createStackNavigator();
 
-  // Request
-  const [request, response, promptAsync] = useAuthRequest(
-    {
-      clientId: '2169df6d-5dc5-432b-882d-4d98a028d5a0',
-      scopes: ['openid'
-           //   , 'profile'
-           //   , 'email'
-            //  , 'offline_access'
-            ],
-      // For usage in managed apps using the proxy
-       redirectUri: makeRedirectUri({
-        // For usage in bare and standalone
-        native: 'com.newmlapps.newmlapp://auth',
-      }),
-    },
-    discovery
-  );
-
+function App() {
   return (
-    <View style={{flex:1,justifyContent:"center"}}>
-    <Button
-      disabled={!request}
-      title="Login please"
-      onPress={async () => {
-        console.log(request.redirectUri);
-        const response = await promptAsync();
-        console.log(JSON.stringify(response));
-        }}
-    />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: 'orange',
+        },
+        headerTintColor: 'black',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}>
+     
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Menu" component={HomeScreen} />
+      <Stack.Screen name="ImageAnalysis" component={ImageAnalysisScreen} />
+      <Stack.Screen name="Profile" component={ProfileScreen} />
+      <Stack.Screen name="Audio" component={AudioScreen} />
+
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
+export default App;
