@@ -1,15 +1,23 @@
 import React from 'react';
 import profileImage from '../assets/my_profile.png';
-
+import dogBreedImage from '../assets/dogbreeddetectionmenu.png';
+import chutneyImage from '../assets/chutneyicon.jpg';
+import cognitiveImage from '../assets/visioncognitive.png';
+import indianBreadImage from '../assets/indianbreadicon.png';
+import nlpImage from '../assets/nlpimage.png';
 import { View, Text, Button, TouchableWithoutFeedback,Dimensions, FlatList, StyleSheet,Image } from 'react-native';
 
 
 export function HomeScreen({ route, navigation }) {
 
     const FlatListItems = [{name:'My Profile', Image: profileImage, key: '0'}
-    ,{name:'Audio Transcription', Image: profileImage,key: '1'}
-    ,{name:'Dog Breed Detect', Image: profileImage,key: '2'}
-    ,{name:'Indian Bread detect', Image: profileImage,key: '3'}]
+    ,{name:'Review Score', Image: nlpImage,key: '1'}
+    ,{name:'Dog Breed Detect', Image: dogBreedImage,key: '2'}
+    ,{name:'Indian Bread detect', Image: indianBreadImage,key: '3'}
+    ,{name:'Chutney', Image: chutneyImage,key: '4'}
+    ,{name:'Object Detect', Image: cognitiveImage,key: '5'}
+  
+  ]
     
     const onItemClick = (iconnumber) => {
 
@@ -36,7 +44,7 @@ export function HomeScreen({ route, navigation }) {
           navigation.navigate('ImageAnalysis', 
                                     {
                                       access_token:route.params.access_token,
-                                      imageType:'Dogs'
+                                      imageType:'dog'
                                     }
                               );
                             
@@ -48,12 +56,34 @@ export function HomeScreen({ route, navigation }) {
           navigation.navigate('ImageAnalysis', 
                                     {
                                       access_token:route.params.access_token,
-                                      imageType:'IndianBread'
+                                      imageType:'indianbread'
                                     }
                               );
                             
           }
+          if(iconnumber=='4')
+          {
+          console.log(iconnumber);
+          navigation.navigate('ImageAnalysis', 
+                                    {
+                                      access_token:route.params.access_token,
+                                      imageType:'chutney'
+                                    }
+                              );
+                              //cognitiveservice
+          }
 
+          if(iconnumber=='5')
+          {
+          console.log(iconnumber);
+          navigation.navigate('ImageAnalysis', 
+                                    {
+                                      access_token:route.params.access_token,
+                                      imageType:'cognitiveservice'
+                                    }
+                              );
+                              //cognitiveservice
+          }
             
     }
 
