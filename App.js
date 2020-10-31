@@ -6,23 +6,19 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Button } from 'react-native';
 import {HomeScreen} from './Screens/HomeScreen';
-
-<<<<<<< HEAD
-export default function App() {
-  // Endpoint
-  const discovery = useAutoDiscovery('https://manishb2ctenant.b2clogin.com/manishb2ctenant.onmicrosoft.com/B2C_1_fb/v2.0/.well-known/openid-configuration');
-  //const discovery = useAutoDiscovery('https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration');
-=======
-import {LoginScreen} from './Screens/LoginScreen';
->>>>>>> 9c3df9cf335ee0ff9de55994e001f11855dc890d
-
 import {ImageAnalysisScreen} from './Screens/ImageAnalysisScreen';
 import {ProfileScreen} from './Screens/ProfileScreen';
 import {AudioScreen} from './Screens/AudioScreen';
+import {LoginScreen} from './Screens/LoginScreen';
+
+export default function App() {
+  // Endpoint
+
+
 
 const Stack = createStackNavigator();
 
-function App() {
+
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -47,4 +43,3 @@ function App() {
   );
 }
 
-export default App;

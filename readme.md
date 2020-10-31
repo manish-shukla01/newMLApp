@@ -10,6 +10,6 @@
 
 Other repos connected to this project:
 
-1. API
-2. Custom traiining useing azure ML SDK and compute
-3. Custom Vision (Model took less than ¬15 min to build using microsoft custom vision)
+1. [API app](https://github.com/manish-shukla01/newMLAppAPI) 
+2. [Custom training and deploying model to ACI using azure ML SDK.](https://github.com/manish-shukla01/tensorflowkerasinazure)
+
