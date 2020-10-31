@@ -7,7 +7,7 @@ import { Button } from 'react-native';
 
 export default function App() {
   // Endpoint
-  const discovery = useAutoDiscovery('https://manishb2ctenant.b2clogin.com/cd31b2db-a0a7-48a1-89be-6bfe6fc0d5f2/oauth2/v2.0/');
+  const discovery = useAutoDiscovery('https://manishb2ctenant.b2clogin.com/manishb2ctenant.onmicrosoft.com/B2C_1_fb/v2.0/.well-known/openid-configuration');
   //const discovery = useAutoDiscovery('https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration');
 
   //https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_sign_in/v2.0/.well-known/openid-configuration
