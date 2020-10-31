@@ -12,7 +12,7 @@ import  cameraImage from '../assets/cameraicongreen.png';
 import flipImage from '../assets/iconflip.png';
 import clickImage from '../assets/ticksymbolgreen.jpg';
 
-import { View, Text, Button, TouchableWithoutFeedback,Dimensions, FlatList, StyleSheet,Image, ListView } from 'react-native';
+import { View, Text, Button, TouchableWithoutFeedback,Dimensions, FlatList, StyleSheet,Image, ListView, Alert } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
@@ -83,11 +83,16 @@ export function ImageAnalysisScreen({ route, navigation }) {
         console.log(response.data);
         setimage(response.data.fileUri);
         const allData = [];
+        console.log(response.data.stuffToShow);
+        if(response.data.stuffToShow != null && response.data.stuffToShow != undefined && response.data.stuffToShow.length>0){
         response.data.stuffToShow.forEach(element => {
           console.log(element.label);
 
           allData.push({label:element.label, labelvalue:element.labelValue});
         });
+      }
+      else
+        Alert.alert("Oopsies, nothing good came out of it to show. please try again.");
        // console.log(allData);
         setimageAnalysisOutput(allData);
        // console.log(imageAnalysisOutput);
@@ -227,9 +232,16 @@ export function ImageAnalysisScreen({ route, navigation }) {
                                     console.log(response.data);
                                     setimage(response.data.fileUri);
                                     const allData = [];
-                                    response.data.stuffToShow.forEach(element => {  
-                                                allData.push({label:element.label, labelvalue:element.labelValue});
-                                    });
+                                    if(response.data.stuffToShow != null && response.data.stuffToShow != undefined && response.data.stuffToShow.length>0){
+                                      response.data.stuffToShow.forEach(element => {
+                                        console.log(element.label);
+                              
+                                        allData.push({label:element.label, labelvalue:element.labelValue});
+                                      });
+                                    }
+                                    else
+                                      Alert.alert("Oopsies, nothing good came out of it to show. please try again.");
+            
                                     setimageAnalysisOutput(allData);
                                     settakingPic(false);
                                     setProcessing(false);
