@@ -15,20 +15,22 @@ Other repos connected to this project:
 
 ## Some screenshots from the app
 
-Login screen
+### Login screen
+
 ![login screen](https://github.com/manish-shukla01/newMLApp/blob/master/screenshots/IMG_1191.PNG)
 
-Things you can do in app
+### Things you can do in app
+
 ![things](https://github.com/manish-shukla01/newMLApp/blob/master/screenshots/IMG_1192.PNG)\
 
-Review Analysis (NLP)
+### Review Analysis (NLP)
 ![things](https://github.com/manish-shukla01/newMLApp/blob/master/screenshots/IMG_1193.PNG)
 
-Custom Model for image classification using transfer learning
+### Custom Model for image classification using transfer learning
 ![transfer learning](https://github.com/manish-shukla01/newMLApp/blob/master/screenshots/IMG_1194.PNG)
 
-Out of the box MS Custom vision
+### Out of the box MS Custom vision
 ![out of the box](https://github.com/manish-shukla01/newMLApp/blob/master/screenshots/IMG_1195.PNG)
 
-Microsoft Custom vision (Model took less than 20 min to build from start to getting a scoring uri)
+### Microsoft Custom vision (Model took less than 20 min to build from start to getting a scoring uri)
 ![custom vision](https://github.com/manish-shukla01/newMLApp/blob/master/screenshots/IMG_1196.PNG)
