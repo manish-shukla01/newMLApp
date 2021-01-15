@@ -34,3 +34,14 @@ Other repos connected to this project:
 
 ### Microsoft Custom vision (Model took less than 20 min to build from start to getting a scoring uri)
 ![custom vision](https://github.com/manish-shukla01/newMLApp/blob/master/screenshots/IMG_1196.PNG)
+
+### Windows Setup
+https://reactnative.dev/docs/environment-setup<BR>
+https://classic.yarnpkg.com/en/docs/install/#windows-stable<BR>
+
+Run on Visual Studio Code
+```
+yarn global add expo-cli
+```
+
+
