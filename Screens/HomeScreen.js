@@ -16,7 +16,7 @@ export function HomeScreen({ route, navigation }) {
     ,{name:'Indian Bread detect', Image: indianBreadImage,key: '3'}
     ,{name:'Chutney', Image: chutneyImage,key: '4'}
     ,{name:'Object Detect', Image: cognitiveImage,key: '5'}
-  
+    ,{name:'Form', Image: cognitiveImage,key: '6'}  
   ]
     
     const onItemClick = (iconnumber) => {
@@ -77,6 +77,19 @@ export function HomeScreen({ route, navigation }) {
           {
           console.log(iconnumber);
           navigation.navigate('ImageAnalysis', 
+                                    {
+                                      access_token:route.params.access_token,
+                                      imageType:'cognitiveservice'
+                                    }
+                              );
+                              //cognitiveservice
+          }
+          // added form for AML demo
+          if(iconnumber=='6')
+          {
+          console.log(iconnumber);
+ 
+          navigation.navigate('Form', 
                                     {
                                       access_token:route.params.access_token,
                                       imageType:'cognitiveservice'

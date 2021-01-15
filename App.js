@@ -10,6 +10,8 @@ import {ImageAnalysisScreen} from './Screens/ImageAnalysisScreen';
 import {ProfileScreen} from './Screens/ProfileScreen';
 import {AudioScreen} from './Screens/AudioScreen';
 import {LoginScreen} from './Screens/LoginScreen';
+import {FormScreen} from './Screens/FormScreen';
+
 
 export default function App() {
   // Endpoint
@@ -37,6 +39,7 @@ const Stack = createStackNavigator();
       <Stack.Screen name="ImageAnalysis" component={ImageAnalysisScreen} />
       <Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="Audio" component={AudioScreen} />
+      <Stack.Screen name="Form" component={FormScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
