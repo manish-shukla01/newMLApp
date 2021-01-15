@@ -90,7 +90,7 @@ export function FormScreen({ route, navigation }) {
     </TextInput>
 
 
-    <Text style={{fontWeight:"bold"}}>Analysis Results:</Text>
+    <Text style={{fontWeight:"bold"}}>Analysis Results 2:</Text>
     <Text style={{height:100, borderColor:"black", borderRadius:5, borderWidth:1, marginTop:5}}
         
     >
