@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "813dd236-ecfc-4e4f-ac23-57ae8f6719b6",
+		"name": "AMLEndPointDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AMLEndPointDemo_Not_Diabetic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\": [[0, 180, 74, 24, 21, 23.9091702, 1.488172308, 22]]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://836d24f7-652e-40ea-bd88-118f804ded5c.uksouth.azurecontainer.io/score",
+					"protocol": "http",
+					"host": [
+						"836d24f7-652e-40ea-bd88-118f804ded5c",
+						"uksouth",
+						"azurecontainer",
+						"io"
+					],
+					"path": [
+						"score"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AMLEndPointDemo_Diabetic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\": [[1, 100, 74, 24, 21, 23.9091702, 1.488172308, 22]]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://836d24f7-652e-40ea-bd88-118f804ded5c.uksouth.azurecontainer.io/score",
+					"protocol": "http",
+					"host": [
+						"836d24f7-652e-40ea-bd88-118f804ded5c",
+						"uksouth",
+						"azurecontainer",
+						"io"
+					],
+					"path": [
+						"score"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AMLEndPointDemo_Batch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\": [[1, 180, 74, 24, 21, 23.9091702, 1.488172308, 22]]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://836d24f7-652e-40ea-bd88-118f804ded5c.uksouth.azurecontainer.io/score",
+					"protocol": "http",
+					"host": [
+						"836d24f7-652e-40ea-bd88-118f804ded5c",
+						"uksouth",
+						"azurecontainer",
+						"io"
+					],
+					"path": [
+						"score"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
