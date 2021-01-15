@@ -15,6 +15,11 @@ export function FormScreen({ route, navigation }) {
 
     const [pregnancies,setpregnancies] = React.useState("2");
 
+    const [PlasmaGlucose,setPlasmaGlucose] = React.useState("180");
+    
+    const [Diastolic,setDiastolic] = React.useState("70");
+    
+
     
     const [results,setresults]  = React.useState();
     const analyzeText = async() =>{
@@ -37,8 +42,9 @@ export function FormScreen({ route, navigation }) {
         // Pregnancies,	PlasmaGlucose, Diastolic, BloodPressure, TricepsThickness, SerumInsulin, BMI,	DiabetesPedigree, Age
         //const data = {"data": [[1, 180, 74, 24, 21, 23.9091702, 1.488172308, 22]]}
 
+        console.log(`pregnancies ${pregnancies}`);
 
-        const data = {"data": [[1, 180, 74, 24, 21, 23.9091702, 1.488172308, 22], [2, 148, 58, 11, 179, 39.19207553, 0.160829008, 45], [2, 180, 74, 24, 21, 23.9091702, 1.488172308, 22], [2, 180, 74, 24, 21, 23.9091702, 1.488172308, 22], [0, 148, 58, 11, 179, 39.19207553, 0.160829008, 45]]}
+        const data = {"data": [[pregnancies, PlasmaGlucose, Diastolic, 24, 21, 23.9091702, 1.488172308, age]]}
 
         //headers = { 'Content-Type':'application/json' }
 
@@ -64,18 +70,12 @@ export function FormScreen({ route, navigation }) {
     return(
     <View style={{flex:1}}>
 
-    <Text style={{fontWeight:"bold"}}>Text:</Text>
-
-    <TextInput   onChangeText={(text) =>settextToAnalyze(text)}
-        style={{height:100, borderColor:"black", borderRadius:5, borderWidth:1, justifyContent:"flex-start" }} 
-    >
-      {textToAnalyze}  
-    </TextInput>
+   
 
     <Text style={{fontWeight:"bold"}}>Age:</Text>
 
     <TextInput   onChangeText={(text) =>setage(text)}
-        style={{height:100, borderColor:"black", borderRadius:5, borderWidth:1, justifyContent:"flex-start" }} 
+        style={{height:40, borderColor:"black", borderRadius:5, borderWidth:1, justifyContent:"flex-start" }} 
     >
       {age}  
     </TextInput>
@@ -84,10 +84,27 @@ export function FormScreen({ route, navigation }) {
     <Text style={{fontWeight:"bold"}}>Pregnancies:</Text>
 
     <TextInput   onChangeText={(text) =>setpregnancies(text)}
-        style={{height:100, borderColor:"black", borderRadius:5, borderWidth:1, justifyContent:"flex-start" }} 
+        style={{height:40, borderColor:"black", borderRadius:5, borderWidth:1, justifyContent:"flex-start" }} 
     >
       {pregnancies}  
     </TextInput>
+
+    <Text style={{fontWeight:"bold"}}>PlasmaGlucose:</Text>
+
+    <TextInput   onChangeText={(text) =>setPlasmaGlucose(text)}
+        style={{height:40, borderColor:"black", borderRadius:5, borderWidth:1, justifyContent:"flex-start" }} 
+    >
+      {PlasmaGlucose}  
+    </TextInput>
+    
+    <Text style={{fontWeight:"bold"}}>PlasmaGlucose:</Text>
+
+<TextInput   onChangeText={(text) =>setDiastolic(text)}
+    style={{height:40, borderColor:"black", borderRadius:5, borderWidth:1, justifyContent:"flex-start" }} 
+>
+  {Diastolic}  
+</TextInput>
+    
 
 
     <Text style={{fontWeight:"bold"}}>Analysis Results 2:</Text>
