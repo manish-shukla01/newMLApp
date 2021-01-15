@@ -9,15 +9,18 @@ import { doPostCallAMLEndPoint } from './helpercode';
 
 export function FormScreen({ route, navigation }) {
 
-    const [textToAnalyze,settextToAnalyze]  = React.useState("this is good;life is good");
+    const [textToAnalyze,settextToAnalyze]  = React.useState("I like this App");
 
     const [age,setage]  = React.useState("30");
+
+    const [pregnancies,setpregnancies] = React.useState("2");
 
     
     const [results,setresults]  = React.useState();
     const analyzeText = async() =>{
         console.log(textToAnalyze);
         console.log(age);
+        console.log(pregnancies);        
 
         const allSentences = [];
         textToAnalyze.split(';').forEach(element => allSentences.push(element));
@@ -60,6 +63,9 @@ export function FormScreen({ route, navigation }) {
 
     return(
     <View style={{flex:1}}>
+
+    <Text style={{fontWeight:"bold"}}>Text:</Text>
+
     <TextInput   onChangeText={(text) =>settextToAnalyze(text)}
         style={{height:100, borderColor:"black", borderRadius:5, borderWidth:1, justifyContent:"flex-start" }} 
     >
@@ -72,6 +78,15 @@ export function FormScreen({ route, navigation }) {
         style={{height:100, borderColor:"black", borderRadius:5, borderWidth:1, justifyContent:"flex-start" }} 
     >
       {age}  
+    </TextInput>
+
+
+    <Text style={{fontWeight:"bold"}}>Pregnancies:</Text>
+
+    <TextInput   onChangeText={(text) =>setpregnancies(text)}
+        style={{height:100, borderColor:"black", borderRadius:5, borderWidth:1, justifyContent:"flex-start" }} 
+    >
+      {pregnancies}  
     </TextInput>
 
 
