@@ -39,9 +39,12 @@ Other repos connected to this project:
 https://reactnative.dev/docs/environment-setup<BR>
 https://classic.yarnpkg.com/en/docs/install/#windows-stable<BR>
 
-Run on Visual Studio Code
+1. Run on Visual Studio Code
 ```
 yarn global add expo-cli
 ```
 
-
+2. Run on Visual Studio Code
+```
+expo start
+```
